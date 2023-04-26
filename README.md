@@ -1,59 +1,42 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6ebMFVGY)
-# IE 555 Project Proposal Template
+# IE 555 Project Proposal
 
---- 
-**Note**:  The *[italicized]* content below is for your reference only.  Please remove these comments before submitting.
----
 
 ## Team Members:  
-- **Name 1**, **UB Email Address 1** - This is the person who will submit the proposal
-- **Name 2**, **UB Email Address 2**
-- **Name 3**, **UB Email Address 3**
-- **Name 4**, **UB Email Address 4**
+Devang Shinde, devangat@buffalo.edu 
+Shriram Madkar, shrirams@buffalo.edu 
+Gulshankumar Gupta, gulshank@buffalo.edu
+Pushkraj Rane, pushkraj@buffalo.edu 
 
-*No more than 4 team members are allowed.  No exceptions.*
-
----
 
 ## Proposed Project Title
 
-- **Write a brief, but descriptive, title here**
+Data analysis and exploration of Spotify API data
 
---- 
 
-## Project Type
-*[Your group has two options for the course project.  Please select **one** option and provide the corresponding relevant information.]*
+Project Type
+Option 2 - Online Data Analysis
 
-### Option 1 - Research Paper
-*[Remove this section if you are **NOT** choosing Option 1.]*
-> Students may identify a relevant paper from an archived journal which features an algorithm/heuristic designed to solve a particular problem. This algorithm should be coded in Python and validated against the results published in the paper. A final report describing (a) the problem itself, (b) an overview of the solution procedure, (c) a description of how the test data were generating, (d) a summary of the various functions employed to execute the code, and (e) a “how-to” guide for running the Python code is expected.
+Option 2 - Online Data Analysis
 
-#### Reference
-- *[Provide a citation to the journal article, including title, authors, journal name, year.]*
-
-#### Problem Description
-- *[Provide a description of the problem defined in the reference article.]*
-
-#### Algorithm Description
-- *[Provide a description of the algorithm defined in the reference article.]*
-
-#### Source Data
-- *[Concisely explain where you plan to obtain source data on which to test the algorithm.]*
-
-#### Motivation
-- *[Explain why you chose this paper.]*
- 
-### Option 2 - Online Data Analysis
-*[Remove this section if you are **NOT** choosing Option 2.]*
 > Students may develop their own programming project. In this option, students must identify a source of online data, which will be dynamically imported via Python. The Python code must utilize these data to either make decision support recommendations or provide a detailed analysis of the data. A YouTube video describing the mechanics of the Python code will be required, in addition to a “how-to” guide for running the code. All source code must be submitted, and the course instructor must be able to execute the code without errors.
 
-#### Data Sources
-- *[Provide a description of each data source you plan to use.]*
-    - *[For each data source, provide a link to the API documentation.]*
 
-#### Analysis Plan
-- *[Clearly explain the analysis you will conduct with the data.]*
-- *[Clearly justify how the chosen source data will enable your team to conduct this analysis.]*
+Data Sources
 
-#### Motivation
-- *[Explain why you have chosen to conduct this analysis.  What is it about this data that interests you?]*
+•	Spotify API is used as a data source.
+•	The Spotify API (Application Programming Interface) allows developers to access data from the Spotify music streaming service, and build applications that can interact with Spotify's music catalog, user data, and playlists.
+•	To use the Spotify API, we need to register our application with Spotify and obtain an access token, which is required to authenticate API requests. The access token must be included in the header of every API request, along with other parameters
+•	Here is the link to the Spotify API documentation: https://developer.spotify.com/documentation/web-api 
+•	After creating a spotify account or logging into an existing one, the user can create an API documentation and receive unique Developer’s credentials : Client_id and Secret_id, which will be used to fetch and import data.
+
+
+Analysis Plan
+
+The objective of this project is to develop a recommendation system for Spotify tracks based on user preferences, such as artist ID, genre, and track ID, using the Spotify API. We will also explore the relationships between different music features and track popularity and create visualizations to help understand the data better. 
+Once we have imported the Spotify data into our Python environment and installed necessary packages, our first step will be to pre-process the data. This includes treating/checking for any missing values and removing unnecessary data to ensure accurate analysis. We will then move on to data exploration and visualization, utilizing Python's data analysis libraries to gain insights into the data. Through data visualization, we can identify patterns and trends within the Spotify data, such as the relationship between different variables like - artist popularity and genre preference.
+
+
+Motivation
+
+The motivation for this project is to create a recommendation system that suggests tracks based on user preferences and gain insights into what makes a track popular, informing music production decisions. From a technical perspective, the project provides an opportunity to explore data analysis, including data visualization, feature engineering, and classification by working on real world data.  This will also provide valuable experience in data wrangling and working with web-based data sources, which are in high demand in many industries.
