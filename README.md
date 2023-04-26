@@ -3,10 +3,14 @@
 
 
 ## Team Members:  
-**Devang Shinde, devangat@buffalo.edu** 
-**Shriram Madkar, shrirams@buffalo.edu** 
+Devang Shinde, devangat@buffalo.edu
+
+Shriram Madkar, shrirams@buffalo.edu 
+
 Gulshankumar Gupta, gulshank@buffalo.edu
+
 Pushkraj Rane, pushkraj@buffalo.edu 
+
 
 
 ## Proposed Project Title
@@ -22,6 +26,7 @@ Option 2 - Online Data Analysis
 > Students may develop their own programming project. In this option, students must identify a source of online data, which will be dynamically imported via Python. The Python code must utilize these data to either make decision support recommendations or provide a detailed analysis of the data. A YouTube video describing the mechanics of the Python code will be required, in addition to a “how-to” guide for running the code. All source code must be submitted, and the course instructor must be able to execute the code without errors.
 
 
+
 Data Sources
 
 •	Spotify API is used as a data source.
@@ -31,10 +36,12 @@ Data Sources
 •	After creating a spotify account or logging into an existing one, the user can create an API documentation and receive unique Developer’s credentials : Client_id and Secret_id, which will be used to fetch and import data.
 
 
+
 Analysis Plan
 
 The objective of this project is to develop a recommendation system for Spotify tracks based on user preferences, such as artist ID, genre, and track ID, using the Spotify API. We will also explore the relationships between different music features and track popularity and create visualizations to help understand the data better. 
 Once we have imported the Spotify data into our Python environment and installed necessary packages, our first step will be to pre-process the data. This includes treating/checking for any missing values and removing unnecessary data to ensure accurate analysis. We will then move on to data exploration and visualization, utilizing Python's data analysis libraries to gain insights into the data. Through data visualization, we can identify patterns and trends within the Spotify data, such as the relationship between different variables like - artist popularity and genre preference.
+
 
 
 Motivation
