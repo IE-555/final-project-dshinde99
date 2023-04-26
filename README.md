@@ -3,8 +3,8 @@
 
 
 ## Team Members:  
-Devang Shinde, devangat@buffalo.edu 
-Shriram Madkar, shrirams@buffalo.edu 
+**Devang Shinde, devangat@buffalo.edu** 
+**Shriram Madkar, shrirams@buffalo.edu** 
 Gulshankumar Gupta, gulshank@buffalo.edu
 Pushkraj Rane, pushkraj@buffalo.edu 
 
