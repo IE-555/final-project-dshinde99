@@ -18,7 +18,7 @@ Pushkraj Rane, pushkraj@buffalo.edu
 Data analysis and exploration of Spotify API data
 
 
-Project Type
+## Project Type
 Option 2 - Online Data Analysis
 
 Option 2 - Online Data Analysis
@@ -27,7 +27,7 @@ Option 2 - Online Data Analysis
 
 
 
-Data Sources
+## Data Sources
 
 •	Spotify API is used as a data source.
 
@@ -41,7 +41,7 @@ Data Sources
 
 
 
-Analysis Plan
+## Analysis Plan
 
 The objective of this project is to develop a recommendation system for Spotify tracks based on user preferences, such as artist ID, genre, and track ID, using the Spotify API. 
 
@@ -57,6 +57,20 @@ Through data visualization, we can identify patterns and trends within the Spoti
 
 
 
-Motivation
+## Motivation
 
 The motivation for this project is to create a recommendation system that suggests tracks based on user preferences and gain insights into what makes a track popular, informing music production decisions. From a technical perspective, the project provides an opportunity to explore data analysis, including data visualization, feature engineering, and classification by working on real world data.  This will also provide valuable experience in data wrangling and working with web-based data sources, which are in high demand in many industries.
+
+
+## Task List
+| ID | Task Description | Due Date | Status |
+| --- | --- | --- | --- |
+| 1 | Update this table with detailed list of tasks | 2023-05-08 | DONE |
+| 2 | Acquiring Spotify API Credentials - Acquiring API key and installing Spotify library  | 2023-04-16 | DONE |
+| 3 | Importing required data - Retrieving information on the 1000 most popular songs from 2022, including artist name, track name, track popularity, artist id, and track id, etc in a data frame  | 2023-04-22 | DONE |
+| 4 | Feature selection - Selecting and retrieving audio features for created data frame ( track_df ) using the API data  | 2023-04-23 | DONE |
+| 5 | Data Preprocessing - Performing some data cleaning and manipulation, including dropping unnecessary columns, changing data types and sorting  | 2023-04-30 | DONE |
+| 6 | Data Visualization - Performing some exploratory data analysis on the data, including creating bar charts and heatmaps to visualize the data  | 2023-05-06 | IN PROGRESS |
+| 7 | Model Development - Create “sp.recommendations” to generate a list of recommended tracks based on set of input parameters | 2023-05-12 | PENDING |
+| 8 | Complete YouTube video and upload to YouTube | 2023-05-16 | PENDING |
+| 9 | Upload README.md document to Github | 2023-05-17 | PENDING |
