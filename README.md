@@ -120,6 +120,11 @@ There are certain Keys required to access data via the **Spotify API**:
 ## Explanation of the Code
 
 ## 1. Install  Spotify data using client id and key
+
+* Install the spotipy library using pip
+* Import necessary modules from the spotipy package
+* Sets up the Spotify client credentials and creates a Spotify instance
+
 ```
 get_ipython().system('pip install spotipy') 
 
@@ -129,6 +134,10 @@ client_credentials_manager = SpotifyClientCredentials(client_id='2e4f244eba6241b
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 ```
 ## 2. Import songs data for year 2022 
+
+* Initialize empty lists for storing track data.
+* Use the Spotify instance to search for tracks released in 2022.
+* Extract relevant information such as artist name, track name, popularity, artist ID, and track *ID from the search results and appends them to the respective lists.
 
 ```
 artist_name = []
@@ -148,7 +157,9 @@ for i in range(0,1000,50):
 
 ## 3. Create dataframe
 
-# In[3]:
+* Import the pandas library.
+* Create a DataFrame called track_data using the collected track information.
+* Print the shape (number of rows and columns) of the DataFrame and displays the first few rows.
 
 ```
 import pandas as pd
@@ -157,7 +168,9 @@ print(track_data.shape)
 track_data.head()
 ```
 
-# In[4]:
+* Initialize empty lists for storing additional artist data.
+* Retrieve artist information (popularity, genres, followers) using the Spotify API for each artist in the track_data.
+* Assign the retrieved artist data as new columns in the track_data DataFrame.
 
 ```
 art_pop_data = []
@@ -170,7 +183,11 @@ for a_id in track_data.artist_id:
   art_followers_data.append(artist['followers']['total'])
 ```
 
-# In[5]:
+
+* Initializes an empty list for storing audio features.
+* Uses the Spotify API to retrieve audio features for each track in the track_data.
+* Appends the audio features data to the feature_data list.
+* Combines all the feature data into a new DataFrame called data.
 
 ```
 track_data = track_data.assign(art_pop_data=art_pop_data, art_genre_data=art_genre_data, art_followers_data=art_followers_data)
@@ -179,7 +196,8 @@ track_data.head()
 
 ## 4. Create dataframe for all audio features
 
-# In[6]:
+* Drops unnecessary columns from the data DataFrame.
+* Prints information about the track_data and data DataFrames.
 
 ```
 feature_data = []
@@ -200,7 +218,9 @@ data.head()
 
 ## 5. Data preprocessing - Dropping unnecessary columns
 
-# In[7]:
+* Convert selected columns in the track_data DataFrame to appropriate data types.
+* Convert the 'duration_ms', 'instrumentalness', and 'time_signature' columns in the data DataFrame to their respective data types.
+* Print information about the updated track_data and data DataFrames.
 
 ```
 col_data2 = ['key','mode','type', 'uri','track_href','analysis_url']
@@ -211,7 +231,9 @@ print(data.info())
 
 ## 6. Datatype modification - convert required data into numeric
 
-# In[8]:
+* Sorts the track_data DataFrame by 'track_popularity' column in descending order.
+* Displays the top 20 tracks based on popularity, including the track name and artist name.
+
 ```
 track_data['artist_name'] = track_data['artist_name'].astype("string")
 track_data['track_name'] = track_data['track_name'].astype("string")
@@ -224,7 +246,8 @@ print(track_data.info())
 print(data.info())
 ```
 
-# In[9]:
+* Sorts the track_data DataFrame by 'art_followers_data' column in descending order.
+* Displays the top 20 artists based on followers count, including the artist name, popularity, genre, and followers count.
 
 ```
 track_data.sort_values(by=['track_popularity'], ascending=False)[['track_name', 'artist_name']].head(20)
@@ -232,7 +255,10 @@ track_data.sort_values(by=['track_popularity'], ascending=False)[['track_name', 
 
 ## 7. Sorting data based on artists follower data
 
-# In[10]:
+* Defines a function to_1D that flattens a pandas Series of lists into a 1-dimensional Series.
+* Applies the function to the 'art_genre_data' column in track_data and counts the occurrences of each genre.
+* Displays the top 20 genres based on the count of tracks associated with them.
+
 ```
 sort_data = pd.DataFrame(track_data.sort_values(by=['art_followers_data'], ascending=False)[['art_followers_data','art_pop_data', 'artist_name','art_genre_data']])
 sort_data.astype(str).drop_duplicates().head(20)
@@ -240,7 +266,10 @@ sort_data.astype(str).drop_duplicates().head(20)
 
 ## 8. Create function for genre
 
-# In[11]:
+* Imports the matplotlib.pyplot library.
+* Sets the number of top genres to display.
+* Creates a bar plot showing the frequency of the top genres in the track_data DataFrame.
+
 ```
 def to_1D(series):
  return pd.Series([x for _list in series for x in _list])
@@ -249,7 +278,8 @@ to_1D(track_data['art_genre_data']).value_counts().head(20)
 
 ## 9. Data Visualization
 
-# In[12]:
+* Creates a bar plot showing the popularity of the top 10 tracks based on their track names and popularity scores.
+
 ```
 import matplotlib.pyplot as plt
 
@@ -267,7 +297,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-# In[13]:
+* Imports the matplotlib.pyplot library.
+* Creates a histogram showing the distribution of track popularity scores.
+* Adds a vertical line representing the mean popularity score.
 
 ```
 # Bar Plot: Track Popularity
@@ -281,7 +313,9 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-# In[14]:
+
+* Creates a box plot comparing different audio features (danceability, energy, speechiness, etc.) of the tracks.
+
 ```
 #Histogram: Track Popularity Distribution
 import matplotlib.pyplot as plt
@@ -314,7 +348,8 @@ plt.tight_layout()
 plt.show()
 ```
 
-# In[15]:
+* Imports the seaborn library.
+* Creates a correlation matrix heatmap for the audio features in the data DataFrame.
 
 ```
 #Pie chart
@@ -327,7 +362,9 @@ plt.axis('equal')
 plt.show()
 ```
 
-# In[16]:
+* Creates a list of the top 20 genres.
+* For each genre, finds an artist in the sort_data DataFrame associated with that genre and appends their name and genre to a list.
+* Converts the list of artist data into
 
 ```
 #Box Plot: Audio Features Comparison
@@ -340,7 +377,9 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-# In[17]:
+* Creates an empty DataFrame called by_track_pop to store track information sorted by track popularity.
+* Retrieves the track popularity, track name, artist name, genre, and track ID from the track_data DataFrame and appends them to by_track_pop.
+* Displays the top 20 tracks based on popularity, including the track popularity, track name, artist name, genre, and track ID.
 
 ```
 #Heatmap
@@ -354,6 +393,9 @@ plt.show()
 ```
 
 # In[18]:
+* Creates an empty list called top_songs_by_genre to store information about top songs by genre.
+* For each genre in the top 10 genres, finds a track in by_track_pop associated with that genre and appends its track name, track popularity, artist name, and genre to top_songs_by_genre.
+* Converts top_songs_by_genre into a DataFrame using pd.json_normalize().
 
 ```
 top10_genre_data = list(to_1D(track_data['art_genre_data']).value_counts().index[:20])
@@ -368,7 +410,8 @@ pd.json_normalize(art_bygenre_data)
 
 ## 10. Sorting data by track popularity data
 
-# In[19]:
+* Imports the seaborn library.
+* Creates a bar plot showing the track popularity for each genre using the top_songs_by_genre DataFrame.
 
 ```
 by_track_pop = pd.DataFrame(track_data.sort_values(by=['track_popularity'], ascending=False)[['track_popularity','track_name', 'artist_name','art_genre_data', 'track_id']])
@@ -376,7 +419,9 @@ by_track_pop.astype(str).drop_duplicates().head(20)
 top_songs_by_genre = []
 ```
 
-# In[20]:
+* Calculates the total track popularity for each genre.
+* Prepares the data for a pie chart by extracting the genres and their respective popularity.
+* Creates a pie chart showing the distribution of track popularity by genre.
 
 ```
 for genre in top10_genre_data:
@@ -387,7 +432,9 @@ for genre in top10_genre_data:
 pd.json_normalize(top_songs_by_genre)
 ```
 
-# In[21]:
+* Initializes an empty DataFrame called top_100_feat to store the top 100 track features.
+* Selects the top 100 tracks based on popularity from the by_track_pop DataFrame.
+* Retrieves the audio features (danceability, energy, speechiness, acousticness, liveness) for each track from the data DataFrame and appends them to top_100_feat.
 
 ```
 import seaborn as sns
@@ -407,6 +454,8 @@ plt.show()
 ```
 
 # In[22]:
+
+
 
 ```
 import matplotlib.pyplot as plt
@@ -448,6 +497,10 @@ top_100_feat.head()
 ## 12. Top 100 songs recommendation based on top genre
 
 # In[24]:
+
+* Uses the Spotify API to get recommendations based on seed artists, genres, and tracks.
+* Prints the artists and track names from the recommendation results.
+
 ```
 recommendation_data = sp.recommendations(seed_artists=["3PhoLpVuITZKcymswpck5b"], seed_genres=["pop"], seed_tracks=["1r9xUipOqoNwggBpENDsvJ"], limit=100)
 for track in recommendation_data['tracks']:
@@ -471,10 +524,18 @@ for track in recommendation_data['tracks']:
 
 Our Major Results were as follows:
 
+
 * Artist data by top 10 genre
 
 ![artist_data_top_10_genre](artist_data_top_10_genre.png)
 
+
 * Tracks by top 10 genre
 
 ![tracks_by_top_genre](tracks_by_top_genre.png)
+
+
+* Sample recommendations
+
+![sample_recommendations](sample_recommendations.png)
+
