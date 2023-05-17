@@ -167,6 +167,9 @@ track_data = pd.DataFrame({'artist_name' : artist_name, 'track_name' : track_nam
 print(track_data.shape)
 track_data.head()
 ```
+* The "track_data" DataFrame is shown below:
+
+![dataframe_track_data](dataframe_track_data.png)
 
 * Initialize empty lists for storing additional artist data.
 * Retrieve artist information (popularity, genres, followers) using the Spotify API for each artist in the track_data.
@@ -213,6 +216,9 @@ for item in feature_data:
 
 data.head()
 ```
+* The "feature_data" DataFrame showning some audio features is shown below:
+
+![audio_features](audio_features.png)
 
 ## 5. Data preprocessing - Dropping unnecessary columns
 
@@ -225,6 +231,9 @@ data = data.drop(columns=col_data2)
 print(track_data.info())
 print(data.info())
 ```
+* Data Preprocessing output is shown below:
+
+![data_preprocessing](data_preprocessing.png)
 
 ## 6. Datatype modification - convert required data into numeric
 
@@ -251,6 +260,9 @@ print(data.info())
 ```
 track_data.sort_values(by=['track_popularity'], ascending=False)[['track_name', 'artist_name']].head(20)
 ```
+* Data sorting output is shown below:
+
+![Sorting_data_by_track_popularity](Sorting_data_by_track_popularity.png)
 
 ## 7. Sorting data based on artists follower data
 
@@ -261,6 +273,9 @@ track_data.sort_values(by=['track_popularity'], ascending=False)[['track_name', 
 sort_data = pd.DataFrame(track_data.sort_values(by=['art_followers_data'], ascending=False)[['art_followers_data','art_pop_data', 'artist_name','art_genre_data']])
 sort_data.astype(str).drop_duplicates().head(20)
 ```
+* Data resorting by artist followers output is shown below:
+
+![resorted_data_by_total_follower_data](resorted_data_by_total_follower_data.png)
 
 ## 8. Create function for genre
 
@@ -273,6 +288,9 @@ def to_1D(series):
  return pd.Series([x for _list in series for x in _list])
 to_1D(track_data['art_genre_data']).value_counts().head(20)
 ```
+* Genre frequency output is shown below:
+
+![genre_frequency](genre_frequency.png)
 
 ## 9. Data Visualization
 
