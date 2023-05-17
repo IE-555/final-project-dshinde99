@@ -296,6 +296,9 @@ ax.legend(['Genre Count'])
 plt.tight_layout()
 plt.show()
 ```
+* The barplot for Top Genre is shown below:
+
+![barplot_genre](barplot_genre.png)
 
 * Create a bar plot showing the popularity of the top 10 tracks based on their track names and popularity scores.
 
@@ -310,6 +313,10 @@ plt.title('Top 10 Tracks by Popularity')
 plt.xticks(rotation=45)
 plt.show()
 ```
+* The barplot for Track Popularity is shown below:
+
+![bbarplot_tracks_by_popularity](barplot_tracks_by_popularity.png)
+
 
 * Import the matplotlib.pyplot library.
 * Create a histogram showing the distribution of track popularity scores.
@@ -346,6 +353,10 @@ ax.annotate(f'Mean: {mean_popularity:.2f}', xy=(mean_popularity, ax.get_ylim()[1
 plt.tight_layout()
 plt.show()
 ```
+* The Histogram for Track Popularity Distribution is shown below:
+
+![track_popularity_distribution](track_popularity_distribution.png)
+
 
 * Create a pie chart showing the distribution of the top genres
 
@@ -360,6 +371,11 @@ plt.axis('equal')
 plt.show()
 ```
 
+* The Pie Chart for Top Genre Data is shown below:
+
+![Pie_chart_top_genre_data](Pie_chart_top_genre_data.png)
+
+
 * Create a box plot comparing different audio features (danceability, energy, speechiness, etc.) of the tracks.
 
 ```
@@ -372,6 +388,9 @@ plt.ylabel('Value')
 plt.xticks(rotation=45)
 plt.show()
 ```
+* The Boxplot for Top audio feature comparison is shown below:
+
+![Boxplot_audio_feature_comparison](Boxplot_audio_feature_comparison.png)
 
 * Import the seaborn library.
 * Create a correlation matrix heatmap for the audio features in the data DataFrame.
@@ -386,6 +405,9 @@ sns.heatmap(data.corr(), annot=True, cmap='coolwarm')
 plt.title('Correlation Matrix')
 plt.show()
 ```
+* The Heatmap / Correlation Matrix for Audio features is shown below:
+
+![heatmap](heatmap.png)
 
 * Extract the top 20 genres. Retrieves the artist name and genre for each genre in top10_genre_data using sort_data DataFrame.
 * Convert top_songs_by_genre into a DataFrame using pd.json_normalize().
@@ -442,6 +464,10 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
+* The Barplot for Top songs by Genre is shown below:
+
+![top_songs_by_genre](top_songs_by_genre.png)
+
 
 * Calculate total track popularity for each genre by iterating over a list of songs categorized by genre.
 * Store the genre and its corresponding popularity in a dictionary called genre_popularity.
@@ -468,6 +494,10 @@ plt.title('Track Popularity by Genre')
 plt.axis('equal')
 plt.show()
 ```
+
+* The Pie Chart for Track Popularity by Genre is shown below:
+
+![track_popularity_by_genre](track_popularity_by_genre.png)
 
 ## 11. Select important audio features on which recommendation function is build
 
