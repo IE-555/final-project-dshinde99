@@ -101,8 +101,7 @@ The link to the feature description is given on the [Spotify Developer page](htt
 
 ## Requirements
 
-In this section, provide detailed instructions for installing any necessary pre-requisites. This could include:
-Python packages/libraries
+Python packages/libraries used:
 
 * Spotipy package
 * Pandas
@@ -122,7 +121,7 @@ There are certain Keys required to access data via the **Spotify API**:
 
 * Install the spotipy library using pip
 * Import necessary modules from the spotipy package
-* Sets up the Spotify client credentials and creates a Spotify instance
+* Set up the Spotify client credentials and creates a Spotify instance
 
 ```
 get_ipython().system('pip install spotipy') 
@@ -554,7 +553,7 @@ for track in recommendation_data['tracks']:
 * Navigate to the settings of that particular project and it will display the required API Keys.
 
 
-* Ensure that you have installed necessary Python packages. (Again, you may include a reference here to a prior section in the README that provides the instructions.)
+* Ensure that you have installed necessary Python packages.
 * Open a new kernel in Jupyter notebook.
 * Navigate to the directory where  PFA_PROJECT_SPOTIFY API.py is saved in your system.
 * Run the Python script provided.
