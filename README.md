@@ -3,13 +3,13 @@
 
 
 ## Team Members:  
-Devang Shinde, devangat@buffalo.edu
+**Devang Shinde, devangat@buffalo.edu
 
-Shriram Madkar, shrirams@buffalo.edu 
+**Shriram Madkar, shrirams@buffalo.edu 
 
-Gulshankumar Gupta, gulshank@buffalo.edu
+**Gulshankumar Gupta, gulshank@buffalo.edu
 
-Pushkraj Rane, pushkraj@buffalo.edu 
+**Pushkraj Rane, pushkraj@buffalo.edu 
 
 
 
@@ -19,7 +19,6 @@ Data analysis and exploration of Spotify API data
 
 
 ## Project Type
-Option 2 - Online Data Analysis
 
 Option 2 - Online Data Analysis
 
@@ -70,10 +69,10 @@ The motivation for this project is to create a recommendation system that sugges
 | 3 | Importing required data - Retrieving information on the 1000 most popular songs from 2022, including artist name, track name, track popularity, artist id, and track id, etc in a data frame  | 2023-04-22 | DONE |
 | 4 | Feature selection - Selecting and retrieving audio features for created data frame ( track_df ) using the API data  | 2023-04-23 | DONE |
 | 5 | Data Preprocessing - Performing some data cleaning and manipulation, including dropping unnecessary columns, changing data types and sorting  | 2023-04-30 | DONE |
-| 6 | Data Visualization - Performing some exploratory data analysis on the data, including creating bar charts and heatmaps to visualize the data  | 2023-05-06 | IN PROGRESS |
-| 7 | Model Development - Create “sp.recommendations” to generate a list of recommended tracks based on set of input parameters | 2023-05-12 | PENDING |
-| 8 | Complete YouTube video and upload to YouTube | 2023-05-16 | PENDING |
-| 9 | Upload README.md document to Github | 2023-05-17 | PENDING |
+| 6 | Data Visualization - Performing some exploratory data analysis on the data, including creating bar charts and heatmaps to visualize the data  | 2023-05-06 | DONE |
+| 7 | Model Development - Create “sp.recommendations” to generate a list of recommended tracks based on set of input parameters | 2023-05-12 | DONE |
+| 8 | Complete YouTube video and upload to YouTube | 2023-05-16 | DONE |
+| 9 | Upload README.md document to Github | 2023-05-17 | DONE |
 
 
 ## Introduction
@@ -564,17 +563,42 @@ for track in recommendation_data['tracks']:
 Our Major Results were as follows:
 
 
-* Artist data by top 10 genre
+* Artist data by top 10 genre: Each row in the DataFrame represents an artist and their corresponding genre (Top 10 genre)
 
 ![artist_data_top_10_genre](artist_data_top_10_genre.png)
 
 
-* Tracks by top 10 genre
+* Tracks by top 10 genre: 
+
+The resulting DataFrame will have the following columns:
+
+'track_name': The name of the track.
+'track_popularity': The popularity score of the track.
+'artist_name': The name of the artist associated with the track.
+'artist_genre': The genre of the artist.
+
 
 ![tracks_by_top_genre](tracks_by_top_genre.png)
 
+Each row in the DataFrame represents a top song for a particular genre. The code iterates through the top10_genre_data list and checks if each genre exists in the 'art_genre_data' column of the by_track_pop DataFrame. If a match is found, a dictionary with the relevant information (track name, track popularity, artist name, and genre) is appended to the top_songs_by_genre list.
 
-* Sample recommendations
+* Sample recommendations: 
+
+The output of the code will be a list of artist names and corresponding track names for the recommended tracks. The number of printed lines will depend on the number of tracks returned by the Spotify API, which is limited to 100
 
 ![sample_recommendations](sample_recommendations.png)
 
+
+## Potential Areas for Future Improvement
+
+The current project provides a basic foundation for exploring and analyzing music data from Spotify. Here are some potential future enhancements and extensions for this project:
+
+Build a recommendation system that suggests songs based on user preferences, such as favorite genres, artists, or tracks. This can be achieved by implementing collaborative filtering algorithms or content-based filtering techniques.
+
+Explore time series analysis to identify trends and patterns in music popularity over time. This can involve analyzing seasonal trends, identifying rising or declining genres, or predicting future music trends.
+
+Develop a genre classification model using machine learning techniques to automatically classify songs into different genres. This can improve the accuracy of genre-related analysis and recommendations.
+
+Integrate the project with social media platforms to gather data about users' music preferences, such as their Spotify playlists, liked songs, or music-related posts. This data can be used to enhance recommendations and provide more personalized insights.
+
+Integrate the project with other music-related APIs or services, such as lyrics APIs, concert ticketing services, or music streaming platforms, to provide additional functionalities and enrich the user experience.
