@@ -473,4 +473,4 @@ Our Major Results were as follows:
 
 Artist data by top 10 genre
 
-![Image of Plot](artist data_top 10 genre.png)
+![artist data_top 10 genre](./artist data_top 10 genre.png)
