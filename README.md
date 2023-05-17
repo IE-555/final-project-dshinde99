@@ -473,4 +473,4 @@ Our Major Results were as follows:
 
 Boxplot_audio feature comparison
 
-![Boxplot_audio feature comparison](barplot_genre.png)
+![Boxplot_audio feature comparison](artist_data_top_10_genre.png)
