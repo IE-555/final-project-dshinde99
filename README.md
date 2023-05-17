@@ -121,7 +121,7 @@ There are certain Keys required to access data via the **Spotify API**:
 
 ## 1. Install  Spotify data using client id and key
 ```
-get_ipython().system('pip install spotipy')
+get_ipython().system('pip install spotipy') 
 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -136,7 +136,7 @@ track_name = []
 track_popularity = []
 artist_id = []
 track_id = []
-for i in range(0,1000,50):
+for i in range(0,1000,50): 
     track_results = sp.search(q='year:2022', type='track', limit=50,offset=i)
     for i, t in enumerate(track_results['tracks']['items']):
         artist_name.append(t['artists'][0]['name'])
@@ -209,7 +209,7 @@ print(track_data.info())
 print(data.info())
 ```
 
-# ### 6. Datatype modification - convert required data into numeric
+## 6. Datatype modification - convert required data into numeric
 
 # In[8]:
 ```
@@ -453,3 +453,24 @@ recommendation_data = sp.recommendations(seed_artists=["3PhoLpVuITZKcymswpck5b"]
 for track in recommendation_data['tracks']:
   print(track['artists'][0]['name'], track['name'])
 ```
+
+## How to Run the Code
+
+* Ensure that you have registered for the Spotify API key. 
+* To retrieve the Key you should follow the following steps:
+* Login into the Spotify Developers page and create a new project.
+* Navigate to the settings of that particular project and it will display the required API Keys.
+
+
+* Ensure that you have installed necessary Python packages. (Again, you may include a reference here to a prior section in the README that provides the instructions.)
+* Open a new kernel in Jupyter notebook.
+* Navigate to the directory where  PFA_PROJECT_SPOTIFY API.py is saved in your system.
+* Run the Python script provided.
+
+## Results from your Analysis
+
+Our Major Results were as follows:
+
+Artist data by top 10 genre
+
+![Image of Plot](artist data_top 10 genre.png)
