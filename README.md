@@ -471,6 +471,10 @@ for track in recommendation_data['tracks']:
 
 Our Major Results were as follows:
 
-Boxplot_audio feature comparison
+* Artist data by top 10 genre
 
-![Boxplot_audio feature comparison](artist_data_top_10_genre.png)
+![artist_data_top_10_genre](artist_data_top_10_genre.png)
+
+* Tracks by top 10 genre
+
+![tracks_by_top_genre](tracks_by_top_genre.png)
