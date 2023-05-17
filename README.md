@@ -3,13 +3,13 @@
 
 
 ## Team Members:  
-**Devang Shinde, devangat@buffalo.edu
+**Devang Shinde**, devangat@buffalo.edu
 
-**Shriram Madkar, shrirams@buffalo.edu 
+**Shriram Madkar**, shrirams@buffalo.edu 
 
-**Gulshankumar Gupta, gulshank@buffalo.edu
+**Gulshankumar Gupta**, gulshank@buffalo.edu
 
-**Pushkraj Rane, pushkraj@buffalo.edu 
+**Pushkraj Rane**, pushkraj@buffalo.edu 
 
 
 
@@ -545,6 +545,7 @@ for track in recommendation_data['tracks']:
   print(track['artists'][0]['name'], track['name'])
 ```
 
+
 ## How to Run the Code
 
 * Ensure that you have registered for the Spotify API key. 
@@ -558,6 +559,7 @@ for track in recommendation_data['tracks']:
 * Navigate to the directory where  PFA_PROJECT_SPOTIFY API.py is saved in your system.
 * Run the Python script provided.
 
+
 ## Results from your Analysis
 
 Our Major Results were as follows:
@@ -566,6 +568,7 @@ Our Major Results were as follows:
 * Artist data by top 10 genre: Each row in the DataFrame represents an artist and their corresponding genre (Top 10 genre)
 
 ![artist_data_top_10_genre](artist_data_top_10_genre.png)
+
 
 
 * Tracks by top 10 genre: 
@@ -577,28 +580,30 @@ The resulting DataFrame will have the following columns:
 'artist_name': The name of the artist associated with the track.
 'artist_genre': The genre of the artist.
 
-
 ![tracks_by_top_genre](tracks_by_top_genre.png)
 
 Each row in the DataFrame represents a top song for a particular genre. The code iterates through the top10_genre_data list and checks if each genre exists in the 'art_genre_data' column of the by_track_pop DataFrame. If a match is found, a dictionary with the relevant information (track name, track popularity, artist name, and genre) is appended to the top_songs_by_genre list.
 
-* Sample recommendations: 
+
+
+* Sample Recommendations: 
 
 The output of the code will be a list of artist names and corresponding track names for the recommended tracks. The number of printed lines will depend on the number of tracks returned by the Spotify API, which is limited to 100
 
 ![sample_recommendations](sample_recommendations.png)
 
 
+
 ## Potential Areas for Future Improvement
 
-The current project provides a basic foundation for exploring and analyzing music data from Spotify. Here are some potential future enhancements and extensions for this project:
+* The current project provides a basic foundation for exploring and analyzing music data from Spotify. Here are some potential future enhancements and extensions for this project:
 
-Build a recommendation system that suggests songs based on user preferences, such as favorite genres, artists, or tracks. This can be achieved by implementing collaborative filtering algorithms or content-based filtering techniques.
+* Build a recommendation system that suggests songs based on user preferences, such as favorite genres, artists, or tracks. This can be achieved by implementing collaborative filtering algorithms or content-based filtering techniques.
 
-Explore time series analysis to identify trends and patterns in music popularity over time. This can involve analyzing seasonal trends, identifying rising or declining genres, or predicting future music trends.
+* Explore time series analysis to identify trends and patterns in music popularity over time. This can involve analyzing seasonal trends, identifying rising or declining genres, or predicting future music trends.
 
-Develop a genre classification model using machine learning techniques to automatically classify songs into different genres. This can improve the accuracy of genre-related analysis and recommendations.
+* Develop a genre classification model using machine learning techniques to automatically classify songs into different genres. This can improve the accuracy of genre-related analysis and recommendations.
 
-Integrate the project with social media platforms to gather data about users' music preferences, such as their Spotify playlists, liked songs, or music-related posts. This data can be used to enhance recommendations and provide more personalized insights.
+* Integrate the project with social media platforms to gather data about users' music preferences, such as their Spotify playlists, liked songs, or music-related posts. This data can be used to enhance recommendations and provide more personalized insights.
 
-Integrate the project with other music-related APIs or services, such as lyrics APIs, concert ticketing services, or music streaming platforms, to provide additional functionalities and enrich the user experience.
+* Integrate the project with other music-related APIs or services, such as lyrics APIs, concert ticketing services, or music streaming platforms, to provide additional functionalities and enrich the user experience.
