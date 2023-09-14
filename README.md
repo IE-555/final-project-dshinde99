@@ -75,7 +75,7 @@ There are certain Keys required to access data via the **Spotify API**:
 
 * Install the spotipy library using pip
 * Import necessary modules from the spotipy package
-* Set up the Spotify client credentials and creates a Spotify instance
+* Set up the Spotify client credentials and creates a Spotify instance to initialize a connection to the Spotify Web API using spotify library
 
 ```
 get_ipython().system('pip install spotipy') 
